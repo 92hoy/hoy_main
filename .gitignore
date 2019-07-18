@@ -1,0 +1,10 @@
+*.pyc
+*.log
+*.swp
+/.idea
+/media
+/venv
+/log
+/node_modules
+.DS_Store
+/backend/.DS_Store
