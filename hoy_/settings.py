@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'home',
-    'common'
+    'common',
+    'user'
 ]
 
 MIDDLEWARE = [
@@ -75,25 +76,25 @@ WSGI_APPLICATION = 'hoy_.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
-# # database_id = '172.17.101.235'
-# database_id = '0.0.0.0'
-#
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'edxapp',
-#         'USER': 'edxapp001',
-#         'PASSWORD': 'password',
-#         'HOST': database_id,
-#         'PORT': '3306',
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 #     }
 # }
+# database_id = '172.17.101.235'
+database_id = '0.0.0.0'
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'hoyoy',
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST': database_id,
+        'PORT': '3306',
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators

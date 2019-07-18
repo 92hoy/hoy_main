@@ -15,10 +15,12 @@
   <link rel="stylesheet" href='{% static "theme/libs/bootstrap/dist/css/bootstrap.min.css" %}' type="text/css" />
   <link rel="stylesheet" href='{% static "theme/assets/css/app.css" %}' type="text/css" />
   <link rel="stylesheet" href='{% static "theme/assets/css/style.css" %}' type="text/css" />
+  <link rel="stylesheet" href='{% static "theme/libs/node-waves/dist/waves.min.css" %}' type="text/css" />
 
 </head>
 <body>
 <header class="app-header indigo box-shadow-6">
+
 	<div class="navbar navbar-expand-lg">
 	  <!-- btn to toggle sidenav on small screen -->
 	  <a class="d-lg-none mx-2" data-toggle="modal" data-target="#aside">
@@ -26,7 +28,7 @@
 	  </a>
 	  <!-- Page title -->
 	  	<!-- brand -->
-	  	<a href="../index.html" class="navbar-brand">
+	  	<a href="{% url 'main' %}" class="navbar-brand">
 	  		<svg viewBox="0 0 24 24" height="28" width="28" xmlns="http://www.w3.org/2000/svg">
 	  		    <path d="M0 0h24v24H0z" fill="none"></path>
 	  		    <path d="M19.51 3.08L3.08 19.51c.09.34.27.65.51.9.25.24.56.42.9.51L20.93 4.49c-.19-.69-.73-1.23-1.42-1.41zM11.88 3L3 11.88v2.83L14.71 3h-2.83zM5 3c-1.1 0-2 .9-2 2v2l4-4H5zm14 18c.55 0 1.05-.22 1.41-.59.37-.36.59-.86.59-1.41v-2l-4 4h2zm-9.71 0h2.83L21 12.12V9.29L9.29 21z" fill="#fff" class=""></path>
@@ -41,7 +43,7 @@
 	    <li class="nav-item dropdown">
 	      <a class="nav-link px-3" data-toggle="dropdown">
 	        <i class="fa fa-bell text-muted"></i>
-	        <span class="badge badge-pill up danger">12</span>
+	        <span class="badge badge-pill up danger">525</span>
 	      </a>
 	      <!-- dropdown -->
 	      <div class="dropdown-menu dropdown-menu-right w-md animate fadeIn mt-2 p-0">
@@ -222,6 +224,7 @@
 	      </a>
 	    </li>
 	  </ul>
+
 	  <!-- Navbar collapse -->
 		<div class="collapse navbar-collapse  order-lg-1" id="navbarToggler">
 	  	<ul class="navbar-nav mt-2 mt-lg-0 mx-0 mx-lg-2 flex">
@@ -273,7 +276,7 @@
 		  <!-- sidenav top -->
 		  <div class="navbar d-lg-none white" ui-class="white">
 		    <!-- brand -->
-		    <a href="../index.html" class="navbar-brand">
+		    <a href="{% url 'main' %}" class="navbar-brand">
 		    	<svg viewBox="0 0 24 24" height="28" width="28" xmlns="http://www.w3.org/2000/svg">
 		    	    <path d="M0 0h24v24H0z" fill="none"></path>
 		    	    <path d="M19.51 3.08L3.08 19.51c.09.34.27.65.51.9.25.24.56.42.9.51L20.93 4.49c-.19-.69-.73-1.23-1.42-1.41zM11.88 3L3 11.88v2.83L14.71 3h-2.83zM5 3c-1.1 0-2 .9-2 2v2l4-4H5zm14 18c.55 0 1.05-.22 1.41-.59.37-.36.59-.86.59-1.41v-2l-4 4h2zm-9.71 0h2.83L21 12.12V9.29L9.29 21z" fill="#fff" class="fill-theme"></path>
@@ -289,13 +292,13 @@
 		      <div class="scroll">
 		        <div class="py-3 light lt" style="background-image:url('{% static "theme/assets/images/bg.png" %}'); background-size:cover">
 		          <div class="nav-fold px-2">
-		            <a class="d-flex p-2" href="profile.html">
+		            <a class="d-flex p-2" href="{% url 'user_info' %}">
 		                <span class="avatar w-40 rounded grey hide">J</span>
 		                <img src='{% static "theme/assets/images/a1.jpg" %}' alt="..." class="w-40 circle">
 		            </a>
 		            <div class="hidden-folded flex p-2">
 		              <div class="d-flex">
-		                <a href="profile.html" class="mr-auto text-nowrap">
+		                <a href="{% url 'user_info' %}" class="mr-auto text-nowrap">
 		                  Jean Reyes
 		                  <small class="d-block text-muted">UX designer, CA</small>
 		                </a>
@@ -852,7 +855,7 @@
 	    <div class="content-footer white " id="content-footer">
 	    	<div class="d-flex p-3">
 	    		<span class="text-sm text-muted flex">© Copyright. Flatfull</span>
-	    		<div class="text-sm text-muted">Version 1.1.1</div>
+	    		<div class="text-sm text-muted">JHY Version 0.0.1</div>
 	    	</div>
 	    </div>
 	</div>
@@ -864,5 +867,24 @@
 <!-- jQuery -->
 <script src='{% static "theme/libs/jquery/dist/jquery.min.js" %}'></script>
 <script src='{% static "theme/html/scripts/scrollto.js" %}'></script>
+<script src='{% static "theme/libs/node-waves/dist/waves.min.js" %}'></script>
+<!-- Bootstrap -->
+<script src='{% static "theme/popper.js/dist/umd/popper.min.js" %}'></script>
+<script src='{% static "theme/bootstrap/dist/js/bootstrap.min.js" %}'></script>
+<!-- core -->
+<script src='{% static "theme/libs/pace-progress/pace.min.js" %}'></script>
+<script src='{% static "theme/pjax/pjax.js" %}'></script>
+
+<!-- html.script-->
+<script src='{% static "theme/html/scripts/lazyload.config.js" %}'></script>
+<script src='{% static "theme/html/scripts/lazyload.js" %}'></script>
+<script src='{% static "theme/html/scripts/plugin.js" %}'></script>
+<script src='{% static "theme/html/scripts/nav.js" %}'></script>
+<script src='{% static "theme/html/scripts/scrollto.js" %}'></script>
+<script src='{% static "theme/html/scripts/toggleclass.js" %}'></script>
+<script src='{% static "theme/html/scripts/theme.js" %}'></script>
+<script src='{% static "theme/html/scripts/ajax.js" %}'></script>
+<script src='{% static "theme/html/scripts/app.js" %}'></script>
+
 </body>
 </html>

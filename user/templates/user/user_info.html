@@ -1,0 +1,732 @@
+{% extends "main_base/main_base.html" %}
+{% load staticfiles %}
+{% block containor %}
+  <div id="content" class="app-content box-shadow-0" role="main">
+    <!-- Header -->
+    <div class="content-header white  box-shadow-0" id="content-header">
+      <div class="navbar navbar-expand-lg">
+        <!-- Page title -->
+        <div class="navbar-text nav-title flex" id="pageTitle">Profile</div>
+      </div>
+    </div>
+    <!-- Main -->
+    <div class="content-main " id="content-main">
+
+      <!-- ############ Main START-->
+
+
+      <div>
+        <div class="item">
+          <div class="item-bg">
+            <img src="../assets/images/a0.jpg" alt="." class="blur opacity-3">
+          </div>
+          <div class="p-4">
+            <div class="row mt-3">
+              <div class="col-sm-7">
+                <div class="media">
+                  <a href="#">
+              <span class="avatar w-96">
+                <img src="../assets/images/a0.jpg" alt=".">
+                <i class="on"></i>
+              </span>
+                  </a>
+                  <div class="media-body mx-3 mb-2">
+                    <h4>Jean Reyes</h4>
+                    <p class="text-muted"><span class="m-r">UX/UI Director</span>
+                      <small><i class="fa fa-map-marker mr-2"></i>London, UK</small>
+                    </p>
+                    <div class="block clearfix mb-3">
+                      <a href="#" class="btn btn-icon btn-social btn-rounded b-a btn-sm">
+                        <i class="fa fa-facebook"></i>
+                        <i class="fa fa-facebook indigo"></i>
+                      </a>
+                      <a href="#" class="btn btn-icon btn-social btn-rounded b-a btn-sm">
+                        <i class="fa fa-twitter"></i>
+                        <i class="fa fa-twitter light-blue"></i>
+                      </a>
+                      <a href="#" class="btn btn-icon btn-social btn-rounded b-a btn-sm">
+                        <i class="fa fa-google-plus"></i>
+                        <i class="fa fa-google-plus red"></i>
+                      </a>
+                      <a href="#" class="btn btn-icon btn-social btn-rounded b-a btn-sm">
+                        <i class="fa fa-linkedin"></i>
+                        <i class="fa fa-linkedin cyan"></i>
+                      </a>
+                    </div>
+                    <a href="#" class="btn btn-sm primary btn-rounded success active mb-2" data-toggle-class="success">
+                      <span class="d-inline">Follow</span>
+                      <span class="d-none">Following</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-5">
+                <p class="text-md profile-status">I am feeling good!</p>
+                <button class="btn btn-sm rounded btn-outline b-success" data-toggle="collapse" data-target="#editor">
+                  Edit
+                </button>
+                <div class="collapse box mt-2" id="editor">
+                  <textarea class="form-control no-border" rows="2" placeholder="Type something..."></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="white bg b-b px-3">
+          <div class="row">
+            <div class="col-sm-6 order-sm-2">
+              <div class="py-3 text-center text-sm-right">
+                <a href="#" class="d-inline-block px-3 text-center">
+                  <span class="text-md d-block">2k</span>
+                  <small class="text-xs text-muted">Followers</small>
+                </a>
+                <a href="#" class="d-inline-block px-3 b-l b-r text-center">
+                  <span class="text-md d-block">250</span>
+                  <small class="text-xs text-muted">Following</small>
+                </a>
+                <a href="#" class="d-inline-block px-3 text-center">
+                  <span class="text-md d-block">89</span>
+                  <small class="text-xs text-muted">Activities</small>
+                </a>
+              </div>
+            </div>
+            <div class="col-sm-6 order-sm-1">
+              <div class="py-4 clearfix nav-active-theme">
+                <ul class="nav nav-pills nav-sm">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#" data-toggle="tab" data-target="#tab_1">Activities</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" data-toggle="tab" data-target="#tab_2">Stream</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" data-toggle="tab" data-target="#tab_3">Friends</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" data-toggle="tab" data-target="#tab_4">Profile</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="padding">
+          <div class="row">
+            <div class="col-sm-8 col-lg-9">
+              <div class="tab-content">
+                <div class="tab-pane fade show active" id="tab_1">
+                  <div class="streamline mb-2">
+                    <div class="sl-item">
+                      <div class="sl-left">
+                        <img src="../assets/images/a0.jpg" alt="." class="circle">
+                      </div>
+                      <div class="sl-content">
+                        <div class="sl-date text-muted">2 minutes ago</div>
+                        <div class="sl-author">
+                          <a href="#">Peter Joo</a>
+                        </div>
+                        <div class="mb-3">
+                          <p>Check your Internet connection</p>
+                        </div>
+                        <div class="sl-footer">
+                          <a href="#" data-toggle="collapse" data-target="#reply-1">
+                            <i class="fa fa-fw fa-mail-reply text-muted"></i> Reply
+                          </a>
+                        </div>
+                        <div class="box collapse show m-0" id="reply-1">
+                          <form>
+                            <textarea class="form-control no-border" rows="3"
+                                      placeholder="Type something..."></textarea>
+                          </form>
+                          <div class="box-footer clearfix">
+                            <button class="btn info float-right btn-sm">Post</button>
+                            <ul class="nav nav-pills nav-sm">
+                              <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-camera text-muted"></i></a>
+                              </li>
+                              <li class="nav-item"><a class="nav-link" href="#"><i
+                                class="fa fa-video-camera text-muted"></i></a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="sl-item">
+                      <div class="sl-left">
+                        <img src="../assets/images/a2.jpg" alt="." class="circle">
+                      </div>
+                      <div class="sl-content">
+                        <div class="sl-date text-muted">8:30</div>
+                        <div class="sl-author">
+                          <a href="#">Moke</a>
+                        </div>
+                        <div>
+                          <p>Call to customer <a href="#" class="text-primary">Jacob</a> and discuss the detail.</p>
+                          <p>
+                        <span class="d-inline-block p-1 b-a">
+                          <img src="../assets/images/a1.jpg" alt="." class="w-96">
+                        </span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="sl-item">
+                      <div class="sl-left">
+                        <img src="../assets/images/a3.jpg" alt="." class="circle">
+                      </div>
+                      <div class="sl-content">
+                        <div class="sl-date text-muted">Sat, 5 Mar</div>
+                        <div class="sl-author">
+                          <a href="#">Moke</a>
+                        </div>
+                        <blockquote>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante soe
+                            aiea ose dos soois.</p>
+                          <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
+                        </blockquote>
+
+                        <div class="sl-item">
+                          <div class="sl-left">
+                            <img src="../assets/images/a2.jpg" alt="." class="circle">
+                          </div>
+                          <div class="sl-content">
+                            <div class="sl-date text-muted">Sun, 11 Feb</div>
+                            <p><a href="#" class="text-primary">Jessi</a> assign you a task <a href="#"
+                                                                                               class="text-primary">Mockup
+                              Design</a>.</p>
+                          </div>
+                        </div>
+                        <div class="sl-item">
+                          <div class="sl-left">
+                            <img src="../assets/images/a5.jpg" alt="." class="circle">
+                          </div>
+                          <div class="sl-content">
+                            <div class="sl-date text-muted">Thu, 17 Jan</div>
+                            <p>Follow up to close deal</p>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="tab_2">
+                  <div class="streamline">
+                    <div class="sl-item b-success">
+                      <div class="sl-content">
+                        <div class="sl-date text-muted">2 minutes ago</div>
+                        <p>Check your Internet connection</p>
+                      </div>
+                    </div>
+                    <div class="sl-item b-info">
+                      <div class="sl-content">
+                        <div class="sl-date text-muted">9:30</div>
+                        <p>Meeting with tech leader</p>
+                      </div>
+                    </div>
+                    <div class="sl-item b-primary">
+                      <div class="sl-content">
+                        <div class="sl-date text-muted">8:30</div>
+                        <p>Call to customer <a href="#" class="text-primary">Jacob</a> and discuss the detail.</p>
+                      </div>
+                    </div>
+                    <div class="sl-item b-warning">
+                      <div class="sl-content">
+                        <div class="sl-date text-muted">Wed, 25 Mar</div>
+                        <p>Finished task <a href="#" class="text-primary">Testing</a>.</p>
+                      </div>
+                    </div>
+                    <div class="sl-item">
+                      <div class="sl-content">
+                        <div class="sl-date text-muted">Thu, 10 Mar</div>
+                        <p>Trip to the moon</p>
+                      </div>
+                    </div>
+                    <div class="sl-item">
+                      <div class="sl-content">
+                        <div class="sl-date text-muted">Sat, 5 Mar</div>
+                        <p>Prepare for presentation</p>
+                      </div>
+                    </div>
+                    <div class="sl-item">
+                      <div class="sl-content">
+                        <div class="sl-date text-muted">Sun, 11 Feb</div>
+                        <p><a href="#" class="text-primary">Jessi</a> assign you a task <a href="#"
+                                                                                           class="text-primary">Mockup
+                          Design</a>.</p>
+                      </div>
+                    </div>
+                    <div class="sl-item">
+                      <div class="sl-content">
+                        <div class="sl-date text-muted">Thu, 17 Jan</div>
+                        <p>Follow up to close deal</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="tab_3">
+                  <div class="row row-sm">
+                    <div class="col-6 col-lg-4">
+                      <div class="list-item box r mb-2">
+                        <a href="#">
+                      <span class="w-40 avatar">
+                        <img src="../assets/images/a0.jpg" alt="...">
+                        <i class="on avatar-bottom"></i>
+                      </span>
+                        </a>
+                        <div class="list-body">
+                          <div class="text-ellipsis"><a href="#">Crystal Guerrero</a></div>
+                          <small class="text-muted text-ellipsis">Designer, Blogger</small>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6 col-lg-4">
+                      <div class="list-item box r mb-2">
+                        <a href="#">
+                      <span class="w-40 avatar">
+                        <img src="../assets/images/a1.jpg" alt="...">
+                        <i class="on avatar-bottom"></i>
+                      </span>
+                        </a>
+                        <div class="list-body">
+                          <div class="text-ellipsis"><a href="#">James Garcia</a></div>
+                          <small class="text-muted text-ellipsis">Writter, Mag Editor</small>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6 col-lg-4">
+                      <div class="list-item box r mb-2">
+                        <a href="#">
+                      <span class="w-40 avatar">
+                        <img src="../assets/images/a2.jpg" alt="...">
+                        <i class="away avatar-bottom"></i>
+                      </span>
+                        </a>
+                        <div class="list-body">
+                          <div class="text-ellipsis"><a href="#">Jean Schneider</a></div>
+                          <small class="text-muted text-ellipsis">Designer, Blogger</small>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6 col-lg-4">
+                      <div class="list-item box r mb-2">
+                        <a href="#">
+                      <span class="w-40 avatar">
+                        <img src="../assets/images/a3.jpg" alt="...">
+                        <i class="busy avatar-bottom"></i>
+                      </span>
+                        </a>
+                        <div class="list-body">
+                          <div class="text-ellipsis"><a href="#">Joe Holmes</a></div>
+                          <small class="text-muted text-ellipsis">Designer, Blogger</small>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6 col-lg-4">
+                      <div class="list-item box r mb-2">
+                        <a href="#">
+                      <span class="w-40 avatar">
+                        <img src="../assets/images/a4.jpg" alt="...">
+                        <i class="on avatar-bottom"></i>
+                      </span>
+                        </a>
+                        <div class="list-body">
+                          <div class="text-ellipsis"><a href="#">Judith Garcia</a></div>
+                          <small class="text-muted text-ellipsis">Writter, Mag Editor</small>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6 col-lg-4">
+                      <div class="list-item box r mb-2">
+                        <a href="#">
+                      <span class="w-40 avatar">
+                        <img src="../assets/images/a5.jpg" alt="...">
+                        <i class="on avatar-bottom"></i>
+                      </span>
+                        </a>
+                        <div class="list-body">
+                          <div class="text-ellipsis"><a href="#">Judy Woods</a></div>
+                          <small class="text-muted text-ellipsis">Designer, Blogger</small>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6 col-lg-4">
+                      <div class="list-item box r mb-2">
+                        <a href="#">
+                      <span class="w-40 avatar">
+                        <img src="../assets/images/a6.jpg" alt="...">
+                        <i class="on avatar-bottom"></i>
+                      </span>
+                        </a>
+                        <div class="list-body">
+                          <div class="text-ellipsis"><a href="#">OlsJesse Russell</a></div>
+                          <small class="text-muted text-ellipsis">Designer, Blogger</small>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6 col-lg-4">
+                      <div class="list-item box r mb-2">
+                        <a href="#">
+                      <span class="w-40 avatar">
+                        <img src="../assets/images/a7.jpg" alt="...">
+                        <i class="away avatar-bottom"></i>
+                      </span>
+                        </a>
+                        <div class="list-body">
+                          <div class="text-ellipsis"><a href="#">Richard Carr</a></div>
+                          <small class="text-muted text-ellipsis">Writter, Mag Editor</small>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6 col-lg-4">
+                      <div class="list-item box r mb-2">
+                        <a href="#">
+                      <span class="w-40 avatar">
+                        <img src="../assets/images/a8.jpg" alt="...">
+                        <i class="busy avatar-bottom"></i>
+                      </span>
+                        </a>
+                        <div class="list-body">
+                          <div class="text-ellipsis"><a href="#">Sara King</a></div>
+                          <small class="text-muted text-ellipsis">Designer, Blogger</small>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6 col-lg-4">
+                      <div class="list-item box r mb-2">
+                        <a href="#">
+                      <span class="w-40 avatar amber">
+                        D
+                        <i class="busy avatar-bottom"></i>
+                      </span>
+                        </a>
+                        <div class="list-body">
+                          <div class="text-ellipsis"><a href="#">Douglas Torres</a></div>
+                          <small class="text-muted text-ellipsis">Blogger</small>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6 col-lg-4">
+                      <div class="list-item box r mb-2">
+                        <a href="#">
+                      <span class="w-40 avatar blue">
+                        J
+                      </span>
+                        </a>
+                        <div class="list-body">
+                          <div class="text-ellipsis"><a href="#">Jeremy Scott</a></div>
+                          <small class="text-muted text-ellipsis">Blogger</small>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6 col-lg-4">
+                      <div class="list-item box r mb-2">
+                        <a href="#">
+                          <span class="w-40 avatar green">M</span>
+                        </a>
+                        <div class="list-body">
+                          <div class="text-ellipsis"><a href="#">Melissa Garza</a></div>
+                          <small class="text-muted text-ellipsis">Blogger</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="tab_4">
+                  <div class="row mb-2">
+                    <div class="col-6">
+                      <small class="text-muted">Cell Phone</small>
+                      <div class="_500">1243 0303 0333</div>
+                    </div>
+                    <div class="col-6">
+                      <small class="text-muted">Family Phone</small>
+                      <div class="_500">+32(0) 3003 234 543</div>
+                    </div>
+                  </div>
+                  <div class="row mb-2">
+                    <div class="col-6">
+                      <small class="text-muted">Reporter</small>
+                      <div class="_500">Coch Jose</div>
+                    </div>
+                    <div class="col-6">
+                      <small class="text-muted">Manager</small>
+                      <div class="_500">James Richo</div>
+                    </div>
+                  </div>
+                  <div>
+                    <small class="text-muted">Bio</small>
+                    <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id neque quam. Aliquam
+                      sollicitudin venenatis ipsum ac feugiat. Vestibulum ullamcorper sodales nisi nec condimentum.
+                      Mauris convallis mauris at pellentesque volutpat. Phasellus at ultricies neque, quis malesuada
+                      augue.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4 col-lg-3">
+              <div>
+                <div class="box">
+                  <div class="box-header">
+                    <h3>Who to follow</h3>
+                  </div>
+                  <div class="box-divider"></div>
+                  <ul class="list no-border">
+                    <li class="list-item">
+                      <a href="#">
+                    <span class="w-40 avatar">
+                      <img src="../assets/images/a4.jpg" alt="...">
+                      <i class="on bottom"></i>
+                    </span>
+                      </a>
+                      <div class="list-body">
+                        <div><a href="#">Chris Fox</a></div>
+                        <small class="text-muted text-ellipsis">Designer, Blogger</small>
+                      </div>
+                    </li>
+                    <li class="list-item">
+                      <a href="#">
+                    <span class="w-40 avatar">
+                      <img src="../assets/images/a5.jpg" alt="...">
+                      <i class="on bottom"></i>
+                    </span>
+                      </a>
+                      <div class="list-body">
+                        <div><a href="#">Mogen Polish</a></div>
+                        <small class="text-muted text-ellipsis">Writter, Mag Editor</small>
+                      </div>
+                    </li>
+                    <li class="list-item">
+                      <a href="#">
+                    <span class="w-40 avatar">
+                      <img src="../assets/images/a6.jpg" alt="...">
+                      <i class="busy bottom"></i>
+                    </span>
+                      </a>
+                      <div class="list-body">
+                        <div><a href="#">Joge Lucky</a></div>
+                        <small class="text-muted text-ellipsis">Art director, Movie Cut</small>
+                      </div>
+                    </li>
+                    <li class="list-item">
+                      <a href="#">
+                    <span class="w-40 avatar">
+                      <img src="../assets/images/a7.jpg" alt="...">
+                      <i class="away bottom"></i>
+                    </span>
+                      </a>
+                      <div class="list-body">
+                        <div><a href="#">Folisise Chosielie</a></div>
+                        <small class="text-muted text-ellipsis">Musician, Player</small>
+                      </div>
+                    </li>
+                    <li class="list-item">
+                      <a href="#">
+                    <span class="w-40 circle green avatar">
+                      P
+                      <i class="away bottom"></i>
+                    </span>
+                      </a>
+                      <div class="list-body">
+                        <div><a href="#">Peter</a></div>
+                        <small class="text-muted text-ellipsis">Musician, Player</small>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="box">
+                  <div class="box-header">
+                    <h2>Latest Tweets</h2>
+                  </div>
+                  <div class="box-divider"></div>
+                  <ul class="list">
+                    <li class="list-item">
+                      <div class="list-body">
+                        <p>Wellcome <a href="#" class="text-primary">@Drew Wllon</a> and play this web application
+                          template, have fun1 </p>
+                        <small class="d-block text-muted"><i class="fa fa-fw fa-clock-o"></i> 2 minuts ago</small>
+                      </div>
+                    </li>
+                    <li class="list-item">
+                      <div class="list-body">
+                        <p>Morbi nec <a href="#" class="text-primary">@Jonathan George</a> nunc condimentum ipsum dolor
+                          sit amet, consectetur</p>
+                        <small class="d-block text-muted"><i class="fa fa-fw fa-clock-o"></i> 1 hour ago</small>
+                      </div>
+                    </li>
+                    <li class="list-item">
+                      <div class="list-body">
+                        <p><a href="#" class="text-primary">@Josh Long</a> Vestibulum ullamcorper sodales nisi nec
+                          adipiscing elit. Morbi id neque quam. Aliquam sollicitudin venenatis</p>
+                        <small class="d-block text-muted"><i class="fa fa-fw fa-clock-o"></i> 2 hours ago</small>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- ############ Main END-->
+
+    </div>
+    <!-- Footer -->
+    <div class="content-footer white " id="content-footer">
+      <div class="d-flex p-3">
+        <span class="text-sm text-muted flex">&copy; Copyright. Flatfull</span>
+        <div class="text-sm text-muted">Version 1.1.1</div>
+      </div>
+    </div>
+  </div>
+  <!-- ############ Content END-->
+
+  <!-- ############ LAYOUT END-->
+  </div>
+
+
+  <!-- ############ SWITHCHER START-->
+  <div id="setting">
+    <div class="setting dark-white rounded-bottom" id="theme">
+      <a href="#" data-toggle-class="active" data-target="#theme" class="dark-white toggle">
+        <i class="fa fa-gear text-primary fa-spin"></i>
+      </a>
+      <div class="box-header">
+        <a href="https://themeforest.net/item/apply-web-application-admin-template/21072584?ref=flatfull"
+           class="btn btn-xs rounded danger float-right">BUY</a>
+        <strong>Theme Switcher</strong>
+      </div>
+      <div class="box-divider"></div>
+      <div class="box-body">
+        <p id="settingLayout">
+          <label class="md-check my-1 d-block">
+            <input type="checkbox" name="fixedAside">
+            <i></i>
+            <span>Fixed Aside</span>
+          </label>
+          <label class="md-check my-1 d-block">
+            <input type="checkbox" name="fixedContent">
+            <i></i>
+            <span>Fixed Content</span>
+          </label>
+          <label class="md-check my-1 d-block">
+            <input type="checkbox" name="folded">
+            <i></i>
+            <span>Folded Aside</span>
+          </label>
+          <label class="md-check my-1 d-block">
+            <input type="checkbox" name="container">
+            <i></i>
+            <span>Boxed Layout</span>
+          </label>
+          <label class="md-check my-1 d-block">
+            <input type="checkbox" name="ajax">
+            <i></i>
+            <span>Ajax load page</span>
+          </label>
+          <label class="pointer my-1 d-block" data-toggle="fullscreen" data-plugin="screenfull"
+                 data-target="fullscreen">
+          <span class="ml-1 mr-2 auto">
+            <i class="fa fa-expand d-inline"></i>
+            <i class="fa fa-compress d-none"></i>
+          </span>
+            <span>Fullscreen mode</span>
+          </label>
+        </p>
+        <p>Colors:</p>
+        <p>
+          <label class="radio radio-inline m-0 mr-1 ui-check ui-check-color">
+            <input type="radio" name="theme" value="primary">
+            <i class="primary"></i>
+          </label>
+          <label class="radio radio-inline m-0 mr-1 ui-check ui-check-color">
+            <input type="radio" name="theme" value="accent">
+            <i class="accent"></i>
+          </label>
+          <label class="radio radio-inline m-0 mr-1 ui-check ui-check-color">
+            <input type="radio" name="theme" value="warn">
+            <i class="warn"></i>
+          </label>
+          <label class="radio radio-inline m-0 mr-1 ui-check ui-check-color">
+            <input type="radio" name="theme" value="info">
+            <i class="info"></i>
+          </label>
+          <label class="radio radio-inline m-0 mr-1 ui-check ui-check-color">
+            <input type="radio" name="theme" value="success">
+            <i class="success"></i>
+          </label>
+          <label class="radio radio-inline m-0 mr-1 ui-check ui-check-color">
+            <input type="radio" name="theme" value="warning">
+            <i class="warning"></i>
+          </label>
+          <label class="radio radio-inline m-0 mr-1 ui-check ui-check-color">
+            <input type="radio" name="theme" value="danger">
+            <i class="danger"></i>
+          </label>
+        </p>
+        <div class="row no-gutters">
+          <div class="col">
+            <p>Brand</p>
+            <p>
+              <label class="radio radio-inline m-0 mr-1 ui-check">
+                <input type="radio" name="brand" value="dark-white">
+                <i class="light"></i>
+              </label>
+              <label class="radio radio-inline m-0 mr-1 ui-check ui-check-color">
+                <input type="radio" name="brand" value="dark">
+                <i class="dark"></i>
+              </label>
+            </p>
+          </div>
+          <div class="col mx-2">
+            <p>Aside</p>
+            <p>
+              <label class="radio radio-inline m-0 mr-1 ui-check">
+                <input type="radio" name="aside" value="white">
+                <i class="light"></i>
+              </label>
+              <label class="radio radio-inline m-0 mr-1 ui-check ui-check-color">
+                <input type="radio" name="aside" value="dark">
+                <i class="dark"></i>
+              </label>
+            </p>
+          </div>
+          <div class="col">
+            <p>Themes</p>
+            <div class="clearfix">
+              <label class="radio radio-inline ui-check">
+                <input type="radio" name="bg" value="">
+                <i class="light"></i>
+              </label>
+              <label class="radio radio-inline ui-check ui-check-color">
+                <input type="radio" name="bg" value="dark">
+                <i class="dark"></i>
+              </label>
+            </div>
+          </div>
+        </div>
+        <p>Demos</p>
+        <div class="text-md">
+          <a href="dashboard.html?folded=false&amp;bg=&amp;aside=dark&amp;brand=dark" class="no-ajax badge light">0</a>
+          <a href="dashboard.1.html?folded=false&amp;bg=&amp;aside=dark&amp;brand=dark-white"
+             class="no-ajax badge light">1</a>
+          <a href="dashboard.2.html?folded=false&amp;bg=&amp;aside=dark&amp;brand=white"
+             class="no-ajax badge light">2</a>
+          <a href="dashboard.3.html?folded=false&amp;bg=&amp;aside=white&amp;brand=white"
+             class="no-ajax badge light">3</a>
+          <a href="dashboard.4.html?folded=true&amp;bg=&amp;aside=dark" class="no-ajax badge light">4</a>
+          <a href="dashboard.5.html?folded=true&amp;bg=&amp;aside=dark&amp;brand=dark" class="no-ajax badge light">5</a>
+          <a href="dashboard.6.html?folded=false&amp;bg=&amp;aside=white&amp;brand=white"
+             class="no-ajax badge light">6</a>
+          <a href="dashboard.7.html?folded=false&amp;bg=&amp;aside=dark&amp;brand=dark"
+             class="no-ajax badge light">7</a>
+          <a href="dashboard.8.html?folded=false&amp;bg=&amp;aside=white&amp;brand=white"
+             class="no-ajax badge light">8</a>
+          <a href="rtl.html?folded&amp;bg=" class="no-ajax badge light">RTL</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ############ SWITHCHER END-->
+{% endblock %}
