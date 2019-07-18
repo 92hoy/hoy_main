@@ -17,7 +17,8 @@ from django.conf.urls import include, url
 from django.contrib import admin
 
 from home import views
-
+from home import urls as home_urls
 urlpatterns = [
-    url(r'^$', views.main_base, name='main_base'),
+    # url(r'^$', views.main_base, name='main_base'),
+    url(r'^home/', include(home_urls)),
 ]

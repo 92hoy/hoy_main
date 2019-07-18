@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Docs | Apply - Bootstrap 4 Web Application</title>
+  <meta name="description" content="Responsive, Bootstrap, BS4" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- for ios 7 style, multi-resolution icon of 152x152 -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-barstyle" content="black-translucent">
+  <link rel="apple-touch-icon" href="../assets/images/logo.svg">
+  <meta name="apple-mobile-web-app-title" content="Flatkit">
+  <!-- for Chrome on Android, multi-resolution icon of 196x196 -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="shortcut icon" sizes="196x196" href="../assets/images/logo.svg">
+  
+  <!-- style -->
+
+  <link rel="stylesheet" href="../libs/font-awesome/css/font-awesome.min.css" type="text/css" />
+
+  <!-- build:css ../assets/css/app.min.css -->
+  <link rel="stylesheet" href="../libs/bootstrap/dist/css/bootstrap.min.css" type="text/css" />
+  <link rel="stylesheet" href="../assets/css/app.css" type="text/css" />
+  <link rel="stylesheet" href="../assets/css/style.css" type="text/css" />
+  <!-- endbuild -->
+</head>
+<body>
+
+
+<div class="row no-gutters">
+  <div class="col-md-2 light dk b-r">
+    <div class="sidenav d-flex h-100">
+      <div class="p-3 b-b">
+        <h1 class="text-lg m-0"><a href="dashboard.html">Apply</a> <small class="text-muted">docs</small> <sup class="text-xs">1.1.1</sup></h1>
+      </div>
+      <nav class="nav-border b-primary mt-2 flex">
+        <ul class="nav" data-nav>
+          <li>
+            <a href="#build">
+              <span class="nav-text">Build</span>
+            </a>
+          </li>
+          <li>
+            <a href="#preview">
+              <span class="nav-text">Preview</span>
+            </a>
+          </li>
+          <li>
+            <a href="#styles">
+              <span class="nav-text">Styles</span>
+            </a>
+          </li>
+          <li>
+            <a href="#scripts">
+              <span class="nav-text">Scripts</span>
+            </a>
+          </li>
+          <li>
+            <a href="#elements">
+              <span class="nav-badge">
+                <b class="badge primary">14</b>
+              </span>
+              <span class="nav-text">Elements</span>
+            </a>
+          </li>
+          <li>
+            <a href="#browser">
+              <span class="nav-text">Browser</span>
+            </a>
+          </li>
+          <li>
+            <a href="#libs">
+              <span class="nav-text">Libs</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="p-3 text-muted b-t">
+        &copy; Copyright. Flatfull
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-sm-10 dark-white">
+    <div class="p-5">
+      <div id="build">
+        <h3 class="mb-4 text-black">Build tools</h3>
+        <p>Apply uses <a href="http://nodejs.org" class="text-primary">Grunt</a> for its CSS and JavaScript build system, it's optional, you can use this theme without grunt tools, we included all the dependencies in this project.</p>
+        <ol>
+          <li><a href="https://nodejs.org/download" class="text-primary">Download and install Node</a>, which we use to manage our dependencies.</li>
+          <li>Run <code>npm install</code> to install dependencies</li>
+          <li>Run <code>grunt build:sass</code> to build css file</li>
+          <li>Run <code>grunt build:dist</code> to build dist with minified js and css</li>
+        </ol>
+
+        <p class="my-3 text-black">
+          Note: any commands we tell you to run must be ran from the project's root folder.
+        </p>
+      </div>
+
+      <div id="Preview">
+        <h3 class="my-4 text-black">Preview</h3>
+        <p>Upload the unpacked files on to your server. eg. <a href="http://httpd.apache.org/" target="_blank">Apache</a> or <a href="http://www.iis.net/" target="_blank">IIS</a></p>
+        <p>Note: This template is built with Ajax. you need put the files on a server for the lazyload plugins to work</p>
+      </div>
+
+      <div id="includes">
+        <h3 class="my-4 text-black">What's include</h3>
+        <p>You'll find the following directories and files, grouping common resources and providing both compiled and minified distribution files, as well as raw source files.</p>
+        <pre class="p-4">
+Apply/
+   |-- README.md
+   |-- CHANGELOG.md
+   |-- package.json
+   |-- GruntFile.js
+   |-- index.html
+   |-- assets/
+   |   |-- css/
+   |   |-- images/
+   |-- libs/
+   |   |-- jquery/
+   |   |-- bootstrap/
+   |   |-- ...
+   |-- html/
+   |   |-- dashboard.html
+   |   |-- app.user.html
+   |   |-- ...
+   |   |-- scripts/
+   |   |   |-- app.js
+   |   |   |-- nav.js
+   |   |   |-- ...</pre>
+      </div>
+      <div id="styles">
+        <h3 class="my-4 text-black">Styles / Scss</h3>
+        <p><a class="text-primary" href="https://getbootstrap.com/docs/4.0/getting-started/introduction/">Bootstrap 4</a></p>
+        <p>You can apply any provided colors to any blocks, even on the Light, Dark theme.</p>
+        <p>The css file is generated by Scss files. There are many variables you can config to build the css file. many classes are extended from bootstrap css.</p>
+      </div>
+      <div id="scripts">
+        <h3 class="my-4 text-black">Scripts</h3>
+        <h5>Ajax</h5>
+        <p>This template uses the Pjax for ajax load the page. you can disable it by remove the relative codes(remove the html/scripts/ajax.js)</p>
+      </div>
+      <div id="elements">
+        <h3 class="my-4 text-black">Elements</h3>
+        <p>Bootstrap 4 components</p>
+        <ul class="h6 l-h-2x">
+          <li>
+            <a href="ui.arrow.html" ><span>Arrow</span></a>
+          </li>
+          <li>
+            <a href="ui.badge.html" ><span>Badge</span></a>
+          </li>
+          <li>
+            <a href="ui.box.html" ><span>Box</span></a>
+          </li>
+          <li>
+            <a href="ui.button.html" ><span>Button</span></a>
+          </li>
+          <li>
+            <a href="ui.color.html" ><span>Color</span></a>
+          </li>
+          <li>
+            <a href="ui.dropdown.html" ><span>Dropdown</span></a>
+          </li>
+          <li>
+            <a href="ui.grid.html" ><span>Grid</span></a>
+          </li>
+          <li>
+            <a href="ui.icon.html" ><span>Icon</span></a>
+          </li>
+          <li>
+            <a href="ui.list.html" ><span>List Group</span></a>
+          </li>
+          <li>
+            <a href="ui.modal.html" ><span>Modal</span></a>
+          </li>
+          <li>
+            <a href="ui.nav.html" ><span>Nav</span></a>
+          </li>
+          <li>
+            <a href="ui.streamline.html" ><span>Streamline</span></a>
+          </li>
+          <li>
+            <a href="ui.timeline.html" ><span>Timeline</span></a>
+          </li>
+          <li>
+            <a href="ui.widget.html" ><span>Widget</span></a>
+          </li>
+        </ul>
+      </div>
+      <div id="libs">
+        <h3 class="my-4 text-black">Libs <small class="text-muted text-xs">all libs licenses are </small><span class="badge badge-sm success">MIT</span></h3>
+        <ul class="h6 l-h-2x">
+          <li><a href="https://github.com/twbs/bootstrap" target="_blank" data-shr-network="github"><span>Bootstrap 4</span></a></li>
+          <li><a href="https://github.com/FortAwesome/Font-Awesome" target="_blank" data-shr-network="github"><span>FontAwesome</span></a></li>
+          <li><a href="https://github.com/MoOx/pjax" target="_blank" data-shr-network="github"><span>Pjax</span></a></li>
+          <li><a href="https://github.com/HubSpot/pace" target="_blank" data-shr-network="github"><span>Pace</span></a></li>
+          <li><a href="https://github.com/pklauzinski/jscroll" target="_blank" data-shr-network="github"><span>jScroll</span></a></li>
+          <li><a href="https://github.com/javve/list.js" target="_blank" data-shr-network="github"><span>Listjs</span></a></li>
+          <li><a href="https://github.com/jaredreich/notie" target="_blank" data-shr-network="github"><span>Notie</span></a></li>
+          <li><a href="https://github.com/moment/moment" target="_blank" data-shr-network="github">Moment</a></li>
+          <li><a href="https://github.com/wenzhixin/bootstrap-table" target="_blank" data-shr-network="github"><span>Bootstrap table</span></a></li>
+          <li><a href="https://github.com/DataTables/DataTables" target="_blank" data-shr-network="github"><span>Datatables</span></a></li>
+          <li><a href="https://github.com/fullcalendar/fullcalendar" target="_blank" data-shr-network="github"><span>Fullcalendar</span></a></li>
+          <li><a href="https://github.com/lukasoppermann/html5sortable" target="_blank" data-shr-network="github"><span>Html5Sortable</span></a></li>
+          <li><a href="https://github.com/manifestinteractive/jqvmap" target="_blank" data-shr-network="github"><span>JqvMap</span></a></li>
+          <li><a href="https://github.com/chartjs/Chart.js" target="_blank" data-shr-network="github"><span>Chartjs</span></a></li>
+          <li><a href="https://github.com/rendro/easy-pie-chart" target="_blank" data-shr-network="github"><span>Easypiechart</span></a></li>
+          <li><a href="https://github.com/benpickles/peity" target="_blank" data-shr-network="github"><span>Peity</span></a></li>
+          <li><a href="https://github.com/uxsolutions/bootstrap-datepicker" target="_blank" data-shr-network="github"><span>Datepicker</span></a></li>
+          <li><a href="https://github.com/tempusdominus/bootstrap-4" target="_blank" data-shr-network="github"><span>Datetimepicker</span></a></li>
+          <li><a href="https://github.com/enyo/dropzone" target="_blank" data-shr-network="github">Dropzone</a></li>
+          <li><a href="https://github.com/guillaumepotier/Parsley.js" target="_blank" data-shr-network="github"><span>Parsley</span></a></li> 
+          <li><a href="https://github.com/select2/select2" target="_blank" data-shr-network="github"><span>Select2</span></a></li>
+          <li><a href="https://github.com/summernote/summernote" target="_blank" data-shr-network="github"><span>Summernote</span></a></li>
+          <li><a href="https://github.com/VinceG/twitter-bootstrap-wizard" target="_blank" data-shr-network="github">Wizard</a></li>
+          <li><a href="https://github.com/jlmakes/scrollreveal" target="_blank" data-shr-network="github"><span>Scrollreveal</span></a>
+          <li><a href="https://github.com/markdalgleish/stellar.js" target="_blank" data-shr-network="github"><span>Stellar</span></a>
+          <li><a href="https://github.com/leafo/sticky-kit" target="_blank" data-shr-network="github"><span>Sticky-kit</span></a></li>
+        </ul>
+        <script src="https://cdn.shr.one/1.0.1/shr.js"></script>
+        <script>
+            if (window.shr) { window.shr.setup({ count: { classname: 'badge b-a ml-2' } }); }
+        </script>
+      </div>
+      <div class="py-5 text-muted">
+        <h3 class="text-muted">Thanks!</h3>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ############ SWITHCHER START-->
+<div id="setting">
+  <div class="setting dark-white rounded-bottom" id="theme">
+    <a href="#" data-toggle-class="active" data-target="#theme" class="dark-white toggle">
+      <i class="fa fa-gear text-primary fa-spin"></i>
+    </a>
+    <div class="box-header">
+      <a href="https://themeforest.net/item/apply-web-application-admin-template/21072584?ref=flatfull" class="btn btn-xs rounded danger float-right">BUY</a>
+      <strong>Theme Switcher</strong>
+    </div>
+    <div class="box-divider"></div>
+    <div class="box-body">
+      <p id="settingLayout">
+        <label class="md-check my-1 d-block">
+          <input type="checkbox" name="fixedAside">
+          <i></i>
+          <span>Fixed Aside</span>
+        </label>
+        <label class="md-check my-1 d-block">
+          <input type="checkbox" name="fixedContent">
+          <i></i>
+          <span>Fixed Content</span>
+        </label>
+        <label class="md-check my-1 d-block">
+          <input type="checkbox" name="folded">
+          <i></i>
+          <span>Folded Aside</span>
+        </label>
+        <label class="md-check my-1 d-block">
+          <input type="checkbox" name="container">
+          <i></i>
+          <span>Boxed Layout</span>
+        </label>
+        <label class="md-check my-1 d-block">
+          <input type="checkbox" name="ajax">
+          <i></i>
+          <span>Ajax load page</span>
+        </label>
+        <label class="pointer my-1 d-block" data-toggle="fullscreen" data-plugin="screenfull" data-target="fullscreen">
+          <span class="ml-1 mr-2 auto">
+            <i class="fa fa-expand d-inline"></i>
+            <i class="fa fa-compress d-none"></i>
+          </span>
+          <span>Fullscreen mode</span>
+        </label>
+      </p>
+      <p>Colors:</p>
+      <p>
+        <label class="radio radio-inline m-0 mr-1 ui-check ui-check-color">
+          <input type="radio" name="theme" value="primary">
+          <i class="primary"></i>
+        </label>
+        <label class="radio radio-inline m-0 mr-1 ui-check ui-check-color">
+          <input type="radio" name="theme" value="accent">
+          <i class="accent"></i>
+        </label>
+        <label class="radio radio-inline m-0 mr-1 ui-check ui-check-color">
+          <input type="radio" name="theme" value="warn">
+          <i class="warn"></i>
+        </label>
+        <label class="radio radio-inline m-0 mr-1 ui-check ui-check-color">
+          <input type="radio" name="theme" value="info">
+          <i class="info"></i>
+        </label>
+        <label class="radio radio-inline m-0 mr-1 ui-check ui-check-color">
+          <input type="radio" name="theme" value="success">
+          <i class="success"></i>
+        </label>
+        <label class="radio radio-inline m-0 mr-1 ui-check ui-check-color">
+          <input type="radio" name="theme" value="warning">
+          <i class="warning"></i>
+        </label>
+        <label class="radio radio-inline m-0 mr-1 ui-check ui-check-color">
+          <input type="radio" name="theme" value="danger">
+          <i class="danger"></i>
+        </label>
+      </p>
+      <div class="row no-gutters">
+        <div class="col">
+          <p>Brand</p>
+          <p>
+            <label class="radio radio-inline m-0 mr-1 ui-check">
+              <input type="radio" name="brand" value="dark-white">
+              <i class="light"></i>
+            </label>
+            <label class="radio radio-inline m-0 mr-1 ui-check ui-check-color">
+              <input type="radio" name="brand" value="dark">
+              <i class="dark"></i>
+            </label>
+          </p>
+        </div>
+        <div class="col mx-2">
+          <p>Aside</p>
+          <p>
+            <label class="radio radio-inline m-0 mr-1 ui-check">
+              <input type="radio" name="aside" value="white">
+              <i class="light"></i>
+            </label>
+            <label class="radio radio-inline m-0 mr-1 ui-check ui-check-color">
+              <input type="radio" name="aside" value="dark">
+              <i class="dark"></i>
+            </label>
+          </p>
+        </div>
+        <div class="col">
+          <p>Themes</p>
+          <div class="clearfix">
+            <label class="radio radio-inline ui-check">
+              <input type="radio" name="bg" value="">
+              <i class="light"></i>
+            </label>
+            <label class="radio radio-inline ui-check ui-check-color">
+              <input type="radio" name="bg" value="dark">
+              <i class="dark"></i>
+            </label>
+          </div>
+        </div>
+      </div>
+      <p>Demos</p>
+      <div class="text-md">
+        <a href="dashboard.html?folded=false&amp;bg=&amp;aside=dark&amp;brand=dark" class="no-ajax badge light">0</a>
+        <a href="dashboard.1.html?folded=false&amp;bg=&amp;aside=dark&amp;brand=dark-white" class="no-ajax badge light">1</a>
+        <a href="dashboard.2.html?folded=false&amp;bg=&amp;aside=dark&amp;brand=white" class="no-ajax badge light">2</a>
+        <a href="dashboard.3.html?folded=false&amp;bg=&amp;aside=white&amp;brand=white" class="no-ajax badge light">3</a>
+        <a href="dashboard.4.html?folded=true&amp;bg=&amp;aside=dark" class="no-ajax badge light">4</a>
+        <a href="dashboard.5.html?folded=true&amp;bg=&amp;aside=dark&amp;brand=dark" class="no-ajax badge light">5</a>
+        <a href="dashboard.6.html?folded=false&amp;bg=&amp;aside=white&amp;brand=white" class="no-ajax badge light">6</a>
+        <a href="dashboard.7.html?folded=false&amp;bg=&amp;aside=dark&amp;brand=dark" class="no-ajax badge light">7</a>
+        <a href="dashboard.8.html?folded=false&amp;bg=&amp;aside=white&amp;brand=white" class="no-ajax badge light">8</a>
+        <a href="rtl.html?folded&amp;bg=" class="no-ajax badge light">RTL</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ############ SWITHCHER END-->
+
+<!-- build:js scripts/app.min.js -->
+<!-- jQuery -->
+  <script src="../libs/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap -->
+  <script src="../libs/popper.js/dist/umd/popper.min.js"></script>
+  <script src="../libs/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- core -->
+  <script src="../libs/pace-progress/pace.min.js"></script>
+  <script src="../libs/pjax/pjax.js"></script>
+
+  <script src="scripts/lazyload.config.js"></script>
+  <script src="scripts/lazyload.js"></script>
+  <script src="scripts/plugin.js"></script>
+  <script src="scripts/nav.js"></script>
+  <script src="scripts/scrollto.js"></script>
+  <script src="scripts/toggleclass.js"></script>
+  <script src="scripts/theme.js"></script>
+  <script src="scripts/ajax.js"></script>
+  <script src="scripts/app.js"></script>
+<!-- endbuild -->
+</body>
+</html>
