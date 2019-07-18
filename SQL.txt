@@ -1,0 +1,12 @@
+CREATE TABLE `hoyoy`.`user` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `user_id` VARCHAR(20) NOT NULL,
+  `username` VARCHAR(20) NOT NULL,
+  `password` VARCHAR(32) NOT NULL,
+  `name` VARCHAR(20) NULL,
+  `email` VARCHAR(100) NULL,
+  `regist_date` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `birth` VARCHAR(20) NULL,
+  `modify_date` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `ph` VARCHAR(20) NULL,
+  PRIMARY KEY (`id`));
