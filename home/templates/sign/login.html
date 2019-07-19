@@ -1,0 +1,113 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <link rel="apple-touch-icon" href='{% static "theme/assets/images/layout.png" %}'>
+  <link rel="shortcut icon" sizes="196x196" href='{% static "theme/assets/images/layout.png" %}'>
+
+  <!-- style -->
+  <link rel="stylesheet" href='{% static "theme/libs/ionicons/dist/css/ionicons.min.css" %}' type="text/css"/>
+  <link rel="stylesheet" href='{% static "theme/assets/css/app.min.css" %}' type="text/css"/>
+  <link rel="stylesheet" href='{% static "theme/libs/font-awesome/css/font-awesome.css" %}' type="text/css" />
+
+  <!-- build:css ../assets/css/app.min.css -->
+  <link rel="stylesheet" href='{% static "theme/libs/bootstrap/dist/css/bootstrap.min.css" %}' type="text/css" />
+  <link rel="stylesheet" href='{% static "theme/assets/css/app.css" %}' type="text/css" />
+  <link rel="stylesheet" href='{% static "theme/assets/css/style.css" %}' type="text/css" />
+  <link rel="stylesheet" href='{% static "theme/libs/node-waves/dist/waves.min.css" %}' type="text/css" />
+</head>
+<body>
+{% block script_down %}
+  <script>
+  $(document).ready(function () {
+
+  });
+  </script>
+{% endblock %}
+
+<div class="d-flex flex-column flex">
+  <div class="navbar light bg pos-rlt box-shadow">
+    <div class="mx-auto">
+      <!-- brand -->
+      <a href="{% url 'main' %}" class="navbar-brand">
+      	<svg viewBox="0 0 24 24" height="28" width="28" xmlns="http://www.w3.org/2000/svg">
+      	    <path d="M0 0h24v24H0z" fill="none"/>
+      	    <path d="M19.51 3.08L3.08 19.51c.09.34.27.65.51.9.25.24.56.42.9.51L20.93 4.49c-.19-.69-.73-1.23-1.42-1.41zM11.88 3L3 11.88v2.83L14.71 3h-2.83zM5 3c-1.1 0-2 .9-2 2v2l4-4H5zm14 18c.55 0 1.05-.22 1.41-.59.37-.36.59-.86.59-1.41v-2l-4 4h2zm-9.71 0h2.83L21 12.12V9.29L9.29 21z" fill="#fff" class="fill-theme"/>
+      	</svg>
+      	<img src='{% static "theme/assets/images/logo.png" %}' alt="." class="hide">
+      	<span class="hidden-folded d-inline">Apply</span>
+      </a>
+      <!-- / brand -->
+    </div>
+  </div>
+  <div id="content-body">
+    <div class="py-5 text-center w-100">
+      <div class="mx-auto w-xxl w-auto-xs">
+        <div class="px-3">
+
+{#          <div>#}
+{#            <a href="#" class="btn btn-block indigo text-white mb-2">#}
+{#              <i class="fa fa-facebook float-left"></i>#}
+{#              Sign in with Facebook#}
+{#            </a>#}
+{#            <a href="#" class="btn btn-block red text-white">#}
+{#              <i class="fa fa-google-plus float-left"></i>#}
+{#              Sign in with Google+#}
+{#            </a>#}
+{#          </div>#}
+{#          <div class="my-3 text-sm">#}
+{#            OR#}
+{#          </div>#}
+          <form name="form" id="login_form">
+            <h2>로그인</h2>
+            <div class="form-group">
+              <input type="email" class="form-control" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+              <input type="password" class="form-control" placeholder="password" required>
+            </div>
+            <div class="mb-3">
+              <label class="md-check">
+                <input type="checkbox"><i class="primary"></i> Keep me signed in
+              </label>
+            </div>
+            <button type="submit" class="btn primary">Sign in</button>
+          </form>
+
+          <div class="my-4">
+            <a href="forgot-password.html" class="text-primary _600">Forgot password?</a>
+          </div>
+          <div>
+            Do not have an account?
+            <a href="{% url 'sign' %}" class="text-primary _600">Sign up</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- jQuery -->
+<script src='{% static "theme/libs/jquery/dist/jquery.min.js" %}'></script>
+<script src='{% static "theme/html/scripts/scrollto.js" %}'></script>
+<script src='{% static "theme/libs/node-waves/dist/waves.min.js" %}'></script>
+
+<!-- Bootstrap -->
+<script src='{% static "theme/libs/bootstrap/dist/js/bootstrap.min.js" %}'></script>
+<script src='{% static "theme/libs/select2/dist/js/select2.min.js" %}'></script>
+<script src='{% static "theme/libs/select2/dist/js/select2.full.min.js" %}'></script>
+
+<!-- core -->
+<script src='{% static "theme/libs/pace-progress/pace.min.js" %}'></script>
+
+<!-- html.script-->
+<script src='{% static "theme/html/scripts/lazyload.config.js" %}'></script>
+<script src='{% static "theme/html/scripts/lazyload.js" %}'></script>
+<script src='{% static "theme/html/scripts/plugin.js" %}'></script>
+<script src='{% static "theme/html/scripts/nav.js" %}'></script>
+<script src='{% static "theme/html/scripts/scrollto.js" %}'></script>
+<script src='{% static "theme/html/scripts/toggleclass.js" %}'></script>
+</body>
+</html>

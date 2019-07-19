@@ -20,9 +20,27 @@
   <link rel="stylesheet" href='{% static "theme/libs/select2/dist/css/select2.min.css" %}' type="text/css"/>
 
 </head>
+<script>
+  function logout() {
+    $.ajax({
+      url: '{% url 'logout' %}',
+      type: 'POST',
+      dataType: "json",
+      data: {
+        csrfmiddlewaretoken: $("#csrf_token").val(),
+
+      }
+    }).done(function (data) {
+      if (data.return = 'success') {
+        window.location.href = "{% url 'sign' %}"
+      }
+
+    });
+  }
+</script>
 <body>
 <header class="app-header indigo box-shadow-6">
-
+  <input id='csrf_token' value='{{ csrf_token }}' hidden>
   <div class="navbar navbar-expand-lg">
     <!-- btn to toggle sidenav on small screen -->
     <a class="d-lg-none mx-2" data-toggle="modal" data-target="#aside">
@@ -220,7 +238,7 @@
           <a class="dropdown-item" href="docs.html">
             Need help?
           </a>
-          <a class="dropdown-item" href="signin.html">Sign out</a>
+          <a class="dropdown-item" onclick="logout()">Sign out</a>
         </div>
       </li>
       <!-- Navarbar toggle btn -->
@@ -904,6 +922,6 @@
 {#<script src='{% static "theme/html/scripts/theme.js" %}'></script>#}
 {#<script src='{% static "theme/html/scripts/ajax.js" %}'></script>#}
 {#<script src='{% static "theme/html/scripts/app.js" %}'></script>#}
-
+{% block script_down %}{% endblock %}
 </body>
 </html>

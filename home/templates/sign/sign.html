@@ -9,28 +9,95 @@
   <!-- style -->
   <link rel="stylesheet" href='{% static "theme/libs/ionicons/dist/css/ionicons.min.css" %}' type="text/css"/>
   <link rel="stylesheet" href='{% static "theme/assets/css/app.min.css" %}' type="text/css"/>
-  <link rel="stylesheet" href='{% static "theme/libs/font-awesome/css/font-awesome.css" %}' type="text/css" />
+  <link rel="stylesheet" href='{% static "theme/libs/font-awesome/css/font-awesome.css" %}' type="text/css"/>
 
   <!-- build:css ../assets/css/app.min.css -->
-  <link rel="stylesheet" href='{% static "theme/libs/bootstrap/dist/css/bootstrap.min.css" %}' type="text/css" />
-  <link rel="stylesheet" href='{% static "theme/assets/css/app.css" %}' type="text/css" />
-  <link rel="stylesheet" href='{% static "theme/assets/css/style.css" %}' type="text/css" />
-  <link rel="stylesheet" href='{% static "theme/libs/node-waves/dist/waves.min.css" %}' type="text/css" />
+  <link rel="stylesheet" href='{% static "theme/libs/bootstrap/dist/css/bootstrap.min.css" %}' type="text/css"/>
+  <link rel="stylesheet" href='{% static "theme/assets/css/app.css" %}' type="text/css"/>
+  <link rel="stylesheet" href='{% static "theme/assets/css/style.css" %}' type="text/css"/>
+  <link rel="stylesheet" href='{% static "theme/libs/node-waves/dist/waves.min.css" %}' type="text/css"/>
 </head>
 <body>
+{% block script_down %}
+  <script>
+    var submit_chk = 'X'
 
+    function sign_up() {
+      console.log($('#password_1').val())
+      console.log($('#password_2').val())
+      if ($('#email').val().length < 7) {
+        Swal.fire(
+          'Warning',
+          '이메일을 정확히 입력해주세요.',
+          'warning'
+        )
+      } else if ($('#password_1').val().length <7) {
+        Swal.fire(
+          'Warning',
+          '패스워드를 6자리 이상 입력해주세요.',
+          'warning'
+        )
+      } else if ($('#password_2').val().length <7) {
+        Swal.fire(
+          'Warning',
+          '패스워드를 6자리 이상 입력해주세요.',
+          'warning'
+        )
+      } else if ($('#password_1').val() != $('#password_2').val()) {
+        Swal.fire(
+          'Warning',
+          '패스워드가 일치하지 않습니다.',
+          'warning'
+        )
+      } else if ($('#name').val().length == 0) {
+        Swal.fire(
+          'Warning',
+          '이름을 입력해 주세요.',
+          'warning'
+        )
+      } else if ($('#username').val().length == 0) {
+        Swal.fire(
+          'Warning',
+          '별명을 입력해 주세요.',
+          'warning'
+        )
+      } else {
+        $.ajax({
+          url: '{% url 'sign' %}',
+          type: 'POST',
+          dataType: "json",
+          data: {
+            csrfmiddlewaretoken: $("#csrf_token").val(),
+            email: $('#email').val(),
+            password: $('#password_2').val(),
+            name: $('#name').val(),
+            username: $('#username').val(),
+            birth: $('#birth').val(),
+            PhoneNumber: $('#PhoneNumber').val(),
+
+          }
+        }).done(function (data) {
+
+        });
+      }
+
+    }
+  </script>
+{% endblock %}
 
 <div class="d-flex flex-column flex">
   <div class="navbar light bg pos-rlt box-shadow">
     <div class="mx-auto">
       <!-- brand -->
       <a href="{% url 'main' %}" class="navbar-brand">
-      	<svg viewBox="0 0 24 24" height="28" width="28" xmlns="http://www.w3.org/2000/svg">
-      	    <path d="M0 0h24v24H0z" fill="none"/>
-      	    <path d="M19.51 3.08L3.08 19.51c.09.34.27.65.51.9.25.24.56.42.9.51L20.93 4.49c-.19-.69-.73-1.23-1.42-1.41zM11.88 3L3 11.88v2.83L14.71 3h-2.83zM5 3c-1.1 0-2 .9-2 2v2l4-4H5zm14 18c.55 0 1.05-.22 1.41-.59.37-.36.59-.86.59-1.41v-2l-4 4h2zm-9.71 0h2.83L21 12.12V9.29L9.29 21z" fill="#fff" class="fill-theme"/>
-      	</svg>
-      	<img src="../assets/images/logo.png" alt="." class="hide">
-      	<span class="hidden-folded d-inline">Apply</span>
+        <svg viewBox="0 0 24 24" height="28" width="28" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none"/>
+          <path
+            d="M19.51 3.08L3.08 19.51c.09.34.27.65.51.9.25.24.56.42.9.51L20.93 4.49c-.19-.69-.73-1.23-1.42-1.41zM11.88 3L3 11.88v2.83L14.71 3h-2.83zM5 3c-1.1 0-2 .9-2 2v2l4-4H5zm14 18c.55 0 1.05-.22 1.41-.59.37-.36.59-.86.59-1.41v-2l-4 4h2zm-9.71 0h2.83L21 12.12V9.29L9.29 21z"
+            fill="#fff" class="fill-theme"/>
+        </svg>
+        <img src='{% static "theme/assets/images/logo.png" %}' alt="." class="hide">
+        <span class="hidden-folded d-inline">Apply</span>
       </a>
       <!-- / brand -->
     </div>
@@ -40,91 +107,77 @@
       <div class="mx-auto w-xxl w-auto-xs">
         <div class="px-3">
 
-{#          <div>#}
-{#            <a href="#" class="btn btn-block indigo text-white mb-2">#}
-{#              <i class="fa fa-facebook float-left"></i>#}
-{#              Sign in with Facebook#}
-{#            </a>#}
-{#            <a href="#" class="btn btn-block red text-white">#}
-{#              <i class="fa fa-google-plus float-left"></i>#}
-{#              Sign in with Google+#}
-{#            </a>#}
-{#          </div>#}
-{#          <div class="my-3 text-sm">#}
-{#            OR#}
-{#          </div>#}
-          <form name="form">
-            <h2>로그인</h2>
-            <div class="form-group">
-              <input type="email" class="form-control" placeholder="Email" required>
-            </div>
-            <div class="form-group">
-              <input type="password" class="form-control" placeholder="password" required>
-            </div>
-            <div class="mb-3">
-              <label class="md-check">
-                <input type="checkbox"><i class="primary"></i> Keep me signed in
-              </label>
-            </div>
-            <button type="submit" class="btn primary">Sign in</button>
-          </form>
+          {#          <div>#}
+          {#            <a href="#" class="btn btn-block indigo text-white mb-2">#}
+          {#              <i class="fa fa-facebook float-left"></i>#}
+          {#              Sign in with Facebook#}
+          {#            </a>#}
+          {#            <a href="#" class="btn btn-block red text-white">#}
+          {#              <i class="fa fa-google-plus float-left"></i>#}
+          {#              Sign in with Google+#}
+          {#            </a>#}
+          {#          </div>#}
+          {#          <div class="my-3 text-sm">#}
+          {#            OR#}
+          {#          </div>#}
 
-          <form name="form">
+          <form name="form" id="sign_form">
             <h2>회원가입</h2>
             <div class="form-group">
-              <input type="email" class="form-control" placeholder="Email" required>
+              <input type="email" class="form-control" placeholder="Email" id="email" required>
             </div>
             <div class="form-group">
-              <input type="password" class="form-control" placeholder="password 1" required>
+              <input type="password" class="form-control" placeholder="password_1" id="password_1" required>
             </div>
             <div class="form-group">
-              <input type="password" class="form-control" placeholder="password 2" required>
+              <input type="password" class="form-control" placeholder="password_2" id="password_2" required>
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="name" required>
+              <input type="text" class="form-control" placeholder="name" id="name" required>
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="username" required>
+              <input type="text" class="form-control" placeholder="username" id="username" required>
             </div>
             <br>
             <small class="d-block text-muted">선택사항</small>
             <hr>
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="birth" required>
+              <input type="text" class="form-control" placeholder="birth" id="birth">
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="PhoneNumber" required>
+              <input type="text" class="form-control" placeholder="PhoneNumber" id="PhoneNumber" number>
             </div>
 
-            <button type="submit" class="btn primary">Sign up</button>
+            <button class="btn primary" onclick="sign_up()">Sign up</button>
           </form>
 
           <div class="my-4">
             <a href="forgot-password.html" class="text-primary _600">Forgot password?</a>
           </div>
           <div>
-            Do not have an account?
-            <a href="signup.html" class="text-primary _600">Sign up</a>
+            have an account?
+            <a href="{% url 'login' %}" class="text-primary _600">Sign up</a>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-
-<!-- ADD .js -->
-<script src='{% static "lib/bootstrap-datetimepicker-master" %}'></script>
+<!-- CDN -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 
 <!-- jQuery -->
 <script src='{% static "theme/libs/jquery/dist/jquery.min.js" %}'></script>
 <script src='{% static "theme/html/scripts/scrollto.js" %}'></script>
 <script src='{% static "theme/libs/node-waves/dist/waves.min.js" %}'></script>
+
 <!-- Bootstrap -->
-<script src='{% static "theme/popper.js/dist/umd/popper.min.js" %}'></script>
-<script src='{% static "theme/bootstrap/dist/js/bootstrap.min.js" %}'></script>
+<script src='{% static "theme/libs/bootstrap/dist/js/bootstrap.min.js" %}'></script>
+<script src='{% static "theme/libs/select2/dist/js/select2.min.js" %}'></script>
+<script src='{% static "theme/libs/select2/dist/js/select2.full.min.js" %}'></script>
+
 <!-- core -->
 <script src='{% static "theme/libs/pace-progress/pace.min.js" %}'></script>
-<script src='{% static "theme/pjax/pjax.js" %}'></script>
 
 <!-- html.script-->
 <script src='{% static "theme/html/scripts/lazyload.config.js" %}'></script>
@@ -133,7 +186,5 @@
 <script src='{% static "theme/html/scripts/nav.js" %}'></script>
 <script src='{% static "theme/html/scripts/scrollto.js" %}'></script>
 <script src='{% static "theme/html/scripts/toggleclass.js" %}'></script>
-<script src='{% static "theme/html/scripts/ajax.js" %}'></script>
-<script src='{% static "theme/html/scripts/app.js" %}'></script>
 </body>
 </html>

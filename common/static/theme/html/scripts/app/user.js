@@ -37,16 +37,16 @@ window.user = {};
     });
     newField.val('');
 
-    notie.confirm({
-      text: 'Group "'+ label +'" added',
-      submitText: '',
-      cancelText: 'Undo',
-      cancelCallback: function () {
-        navList.items.pop();
-        navList.update();
-        notie.alert({ type: 3, text: 'New group removed...' })
-      }
-    });
+    // notie.confirm({
+    //   text: 'Group "'+ label +'" added',
+    //   submitText: '',
+    //   cancelText: 'Undo',
+    //   cancelCallback: function () {
+    //     navList.items.pop();
+    //     navList.update();
+    //     notie.alert({ type: 3, text: 'New group removed...' })
+    //   }
+    // });
 
   });
 
@@ -81,50 +81,50 @@ window.user = {};
     $('#count').text(count);
   }
 
-  var init = function(){
-    $(document).trigger('refresh');
-    
-    // nav
-    navList = new List(nav_el.substr(1), {
-      listClass: 'nav',
-      item: '<li><a href class="link"><span class="nav-text name"></span></a></li>',
-      valueNames: [
-        'name',
-        { name: 'link', attr: 'href' }
-      ]
-    });
-
-    // list
-    if( $(list_el).length ){
-      list = new List(list_el.substr(1), {
-          valueNames: [
-            'item-title',
-            'item-except',
-            'tag'
-          ],
-          page: 10,
-          pagination: true
-      });
-
-      list.on('updated', function (list) {
-        updateCount(list.matchingItems.length);
-        if (list.matchingItems.length > 0) {
-          $('.no-result').addClass('hide');
-        } else {
-          $('.no-result').removeClass('hide');
-        }
-      });
-
-      updateCount(list.items.length);
-      update(list);
-    }
-
-    if(!noticed){
-      notie.alert({text: 'Try input keyword to search users', position: 'top'});
-      noticed = true;
-    }
-
-  }
+  // var init = function(){
+  //   $(document).trigger('refresh');
+  //
+  //   // nav
+  //   navList = new List(nav_el.substr(1), {
+  //     listClass: 'nav',
+  //     item: '<li><a href class="link"><span class="nav-text name"></span></a></li>',
+  //     valueNames: [
+  //       'name',
+  //       { name: 'link', attr: 'href' }
+  //     ]
+  //   });
+  //
+  //   // list
+  //   if( $(list_el).length ){
+  //     list = new List(list_el.substr(1), {
+  //         valueNames: [
+  //           'item-title',
+  //           'item-except',
+  //           'tag'
+  //         ],
+  //         page: 10,
+  //         pagination: true
+  //     });
+  //
+  //     list.on('updated', function (list) {
+  //       updateCount(list.matchingItems.length);
+  //       if (list.matchingItems.length > 0) {
+  //         $('.no-result').addClass('hide');
+  //       } else {
+  //         $('.no-result').removeClass('hide');
+  //       }
+  //     });
+  //
+  //     updateCount(list.items.length);
+  //     update(list);
+  //   }
+  //
+  //   if(!noticed){
+  //     notie.alert({text: 'Try input keyword to search users', position: 'top'});
+  //     noticed = true;
+  //   }
+  //
+  // }
 
   // for ajax to init again
   list.init = init;
