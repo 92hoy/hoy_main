@@ -19,8 +19,10 @@ from django.contrib import admin
 from home import views
 from home import urls as home_urls
 from user import urls as user_urls
+from ws_app import urls as ws_app_urls
 urlpatterns = [
     # url(r'^$', views.main_base, name='main_base'),
     url(r'^home/', include(home_urls)),
     url(r'^user/', include(user_urls)),
+    url(r'^ws_app/', include(ws_app_urls)),
 ]
