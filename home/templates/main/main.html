@@ -1,6 +1,7 @@
 {% extends "main_base/main_base.html" %}
 {% load staticfiles %}
 {% block containor %}
+
   {% block script_down %}
     <script>
       window.setInterval(function () {
@@ -12,11 +13,10 @@
             csrfmiddlewaretoken: $("#csrf_token").val(),
           }
         }).done(function (data) {
-
           for (var key in data) {
             //console.log(data[key]['data']['average_price'])
-            $('#' + key + '_avg_price').text('￦  ' + data[key]['data']['average_price']);
-            $('#' + key + '_val').text('￦  ' + data[key]['data']['buy_price']);
+            $('#' + key + '_avg_price').text('￦  ' + data[key]['data']['opening_price']);
+            $('#' + key + '_val').text('￦  ' + data[key]['data']['closing_price']);
           }
 
         });

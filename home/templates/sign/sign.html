@@ -2,20 +2,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src='{% static "theme/libs/jquery/dist/jquery.min.js" %}'></script>
+    <link rel="apple-touch-icon" href='{% static "theme/assets/images/layout.png" %}'>
+    <link rel="shortcut icon" sizes="196x196" href='{% static "theme/assets/images/layout.png" %}'>
 
-  <link rel="apple-touch-icon" href='{% static "theme/assets/images/layout.png" %}'>
-  <link rel="shortcut icon" sizes="196x196" href='{% static "theme/assets/images/layout.png" %}'>
+    <!-- style -->
+    <link rel="stylesheet" href='{% static "theme/libs/ionicons/dist/css/ionicons.min.css" %}' type="text/css"/>
+    <link rel="stylesheet" href='{% static "theme/assets/css/app.min.css" %}' type="text/css"/>
+    <link rel="stylesheet" href='{% static "theme/libs/font-awesome/css/font-awesome.css" %}' type="text/css"/>
 
-  <!-- style -->
-  <link rel="stylesheet" href='{% static "theme/libs/ionicons/dist/css/ionicons.min.css" %}' type="text/css"/>
-  <link rel="stylesheet" href='{% static "theme/assets/css/app.min.css" %}' type="text/css"/>
-  <link rel="stylesheet" href='{% static "theme/libs/font-awesome/css/font-awesome.css" %}' type="text/css"/>
+    <!-- build:css ../assets/css/app.min.css -->
+    <link rel="stylesheet" href='{% static "theme/libs/bootstrap/dist/css/bootstrap.min.css" %}' type="text/css"/>
+    <link rel="stylesheet" href='{% static "theme/assets/css/app.css" %}' type="text/css"/>
+    <link rel="stylesheet" href='{% static "theme/assets/css/style.css" %}' type="text/css"/>
+    <link rel="stylesheet" href='{% static "theme/libs/node-waves/dist/waves.min.css" %}' type="text/css"/>
+    <link rel="stylesheet" href='{% static "theme/assets/css/theme/primary.css" %}' type="text/css"/>
+    <link rel="stylesheet" href='{% static "theme/libs/select2/dist/css/select2.min.css" %}' type="text/css"/>
 
-  <!-- build:css ../assets/css/app.min.css -->
-  <link rel="stylesheet" href='{% static "theme/libs/bootstrap/dist/css/bootstrap.min.css" %}' type="text/css"/>
-  <link rel="stylesheet" href='{% static "theme/assets/css/app.css" %}' type="text/css"/>
-  <link rel="stylesheet" href='{% static "theme/assets/css/style.css" %}' type="text/css"/>
-  <link rel="stylesheet" href='{% static "theme/libs/node-waves/dist/waves.min.css" %}' type="text/css"/>
 </head>
 <body>
 {% block script_down %}
@@ -84,7 +87,7 @@
     }
   </script>
 {% endblock %}
-
+<input id='csrf_token' value='{{ csrf_token }}' hidden>
 <div class="d-flex flex-column flex">
   <div class="navbar light bg pos-rlt box-shadow">
     <div class="mx-auto">
@@ -156,7 +159,7 @@
           </div>
           <div>
             have an account?
-            <a href="{% url 'login' %}" class="text-primary _600">Sign up</a>
+            <a href="{% url 'login' %}" class="text-primary _600">Login</a>
           </div>
         </div>
       </div>
