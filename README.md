@@ -1,4 +1,6 @@
 # hoy_main
+
+
 ### BootStrap Theme(Custom)
 
 ### Development Environment
@@ -15,6 +17,10 @@ channels-redis==2.4.0
 ### Channels 를 이용한 websocket 통신
 ### Redis 는 docker 에 올려서 사용
 ```
+--pyenv
+$ python -m venv venv
+$ pip install -r requirements.txt
+
 $ docker run -p 6379:6379 -d redis:2.8
 $ pip3 install channels_redis
 ```
